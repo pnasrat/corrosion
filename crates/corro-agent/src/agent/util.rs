@@ -131,6 +131,9 @@ pub async fn initialise_foca(agent: &Agent) {
 }
 
 /// Prune the database
+// FIXME: allow this function to be unused to shut up CI.  We'll have
+// to address this problem again eventually
+#[allow(unused)]
 pub async fn clear_overwritten_versions(agent: Agent, bookie: Bookie) {
     let pool = agent.pool();
 
